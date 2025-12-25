@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Calculator</title>
+</head>
+<div>
+    <body>
+        <h1>General Parameters</h1>
+
+    </body>
+</div>
+<div>
+    <body>
+        <form method="POST">
+            <h1>Drive Train Calculations</h1>
+            <label>Drive Motor KV (rev/(min*V))</label>
+            <input type =  "text" name = "kv_input">
+            <button type = "submit"> Submit</button>
+            <h3> This is the current KV  "{{dpara.DmotorKV}}" </h3>
+            <label>Saturation Current (A) </label>
+            <label>Gearbox reduction</label>
+            <label>External Reduction</label>
+            <label>Drive Reduction</label>
+            <label># motors per side</label>
+            <label>Wheel Diameter (in)</label>
+        </form>
+    </body>
+</div>
+<div>
+    <body> 
+        <h1>Weapon Calculations</h1>
+        <label>Weapon Motor KV (rev/(min*v))</label>
+        <label>Reduction Ratio</label>
+        <label># of motors</label>
+        <label>Weight of Individual Motors (oz)</label>
+        <label>Weapon Diameter (in)</label>
+        <label>Torque Constant (nNm/A)</label>
+        <label>Saturation Current (A) </label>
+        <label>Goal MOI </label>
+    </body>
+</div>
+<div>
+    <body> 
+        <h1>Arm Calculations</h1>
+        <label>Weapon Motor KV (rev/(min*v))</label>
+        <label>Gear Box Ratio</label>
+        <label>Belt Ratio</label>
+        <label>Bevel Ratio</label>
+        <label>Saturation Current (A)</label>
+        <label>Max Swing Angle (rad)</label>
+        <label>Arm Length (in)</label>
+        <label>Weapon Weight (lb)</label>
+        <label>Arm Weight (lb)</label>
+        <label>Moment of Inertia</label>
+    </body>
+</div>
+</html>
