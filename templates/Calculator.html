@@ -7,8 +7,19 @@
 </head>
 <div>
     <body>
-        <h1>General Parameters</h1>
-
+        <form method = "POST"> 
+            <h1>General Parameters</h1>
+            <label>Cell Voltage:</label>
+            <input type = "number" name = "CV" value = "{{ gpara.CV}}"> <br>
+            <label>num of Cells:</label>
+            <input type = "number" name = "numberC" value = "{{ gpara.numberC}}"> <br>
+            <label>Robot Mass:</label>
+            <input type = "number" name = "RM" value = "{{ gpara.RM}}"> <br>
+            <label>Magnetic Downforce:</label>
+            <input type = "number" name = "MagneticD" value = "{{ gpara.MagneticD}}"> <br>
+            <label> Arena:</label>
+            <input type = "number" name = "Arena" value = "{{ gpara.Arena}}"> <br>
+        </form>
     </body>
 </div>
 <div>
@@ -16,15 +27,19 @@
         <form method="POST">
             <h1>Drive Train Calculations</h1>
             <label>Drive Motor KV (rev/(min*V))</label>
-            <input type =  "text" name = "kv_input">
-            <button type = "submit"> Submit</button>
-            <h3> This is the current KV  "{{dpara.DmotorKV}}" </h3>
+            <input type =  "number" name = "DmotorKV" value = "{{ dpara.DmotorKV}}"> <br>
             <label>Saturation Current (A) </label>
+            <input type = "number" name = "DSaturation" value = "{{ dpara.DSaturation}}"> <br>
             <label>Gearbox reduction</label>
+            <input type = "number" name = "DGearboxR" value = "{{ dpara.GearboxR}}"> <br>
             <label>External Reduction</label>
+            <input type = "number" name = "DExternalR" value = "{{ dpara.DExternalR}}"> <br>
             <label>Drive Reduction</label>
-            <label># motors per side</label>
+            <input type = "number" name = "DDR" value = "{{ dpara.DDR}}"> <br>
+            <label>num motors per side</label>
+            <input type = "number" name = "Dnummotor" value = "{{ dpara.Dnummotor}}"> <br>
             <label>Wheel Diameter (in)</label>
+            <input type = "number" name = "DWheelD" value = "{{ dpara.DWheelD}}""> <br>
         </form>
     </body>
 </div>
@@ -32,28 +47,46 @@
     <body> 
         <h1>Weapon Calculations</h1>
         <label>Weapon Motor KV (rev/(min*v))</label>
+        <input type = "number" name = "WmotorKV" value = "{{ wpara.WmotorKV}}"> <br>
         <label>Reduction Ratio</label>
-        <label># of motors</label>
+        <input type = "number" name = "WRR" value = "{{ wpara.WRR}}"> <br>
+        <label>num of motors</label>
+        <input type = "number" name = "Wnummotor" value = "{{ wpara.Wnummotor}}"> <br>
         <label>Weight of Individual Motors (oz)</label>
+        <input type = "number" name = "WWeightmotor" value = "{{ wpara.WWeightmotor}}"> <br>
         <label>Weapon Diameter (in)</label>
+        <input type = "number" name = "WweaponD" value = "{{ wpara.WweaponD}}"> <br>
         <label>Torque Constant (nNm/A)</label>
+        <input type = "number" name = "WTroque" value = "{{ wpara.WTorque}}"> <br>
         <label>Saturation Current (A) </label>
+        <input type = "number" name = "WSaturation" value = "{{ wpara.WSaturation}}"> <br>
         <label>Goal MOI </label>
+        <input type = "number" name = "WGoalMOI" value = "{{ wpara.WGoalMOI}}"> <br>
     </body>
 </div>
 <div>
     <body> 
         <h1>Arm Calculations</h1>
         <label>Weapon Motor KV (rev/(min*v))</label>
+        <input type = "number" name = "AMotorKV" value = "{{ apara.AMotorKV}}"> <br>
         <label>Gear Box Ratio</label>
+        <input type = "number" name = "AGearboxR" value = "{{ apara.AGearboxR}}"> <br>
         <label>Belt Ratio</label>
+        <input type = "number" name = "ABeltR" value = "{{ apara.ABeltR}}"> <br>
         <label>Bevel Ratio</label>
+        <input type = "number" name = "ABevelR" value = "{{ apara.ABevelR}}"> <br>
         <label>Saturation Current (A)</label>
+        <input type = "number" name = "ASaturation" value = "{{ apara.ASaturation}}"> <br>
         <label>Max Swing Angle (rad)</label>
+        <input type = "number" name = "AMaxSwingA" value = "{{ apara.AMaxSwingA}}"> <br>
         <label>Arm Length (in)</label>
+        <input type = "number" name = "ArmLength" value = "{{ apara.ArmLength}}"> <br>
         <label>Weapon Weight (lb)</label>
+        <input type = "number" name = "AWeaponW" value = "{{ apara.AWeaponW}}"> <br>
         <label>Arm Weight (lb)</label>
+        <input type = "number" name = "Armweight" value = "{{ apara.ArmWeight}}"> <br>
         <label>Moment of Inertia</label>
+        <input type = "number" name = "MOI" value = " {{ apara.MOI}}">
     </body>
 </div>
 </html>

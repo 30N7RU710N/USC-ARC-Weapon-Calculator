@@ -3,7 +3,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__, template_folder = 'templates')
 General = {
     "CV" : "",
-    "#C" : "",
+    "numberC" : "",
     "RM" :"" ,
     "MagneticD" : "",
     "Arena" : ""
@@ -40,9 +40,15 @@ Arm = {
 @app.route('/', methods = ['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        user_input = request.form.get('kv_input')
-        if user_input:
-            Drive["DmotorKV"] = user_input
+        for key, value in request.form.items():
+            if key in General:
+                General[key] = value
+            if key in Drive:
+                Drive[key] = value
+            if key in Weapon:
+                Weapon[key] = value
+            if key in Arm:
+                Arm[key] = value
     return render_template('Calculator.html', gpara = General, dpara = Drive, wpara = Weapon, apara = Arm)
 if __name__ == "__main__":
     app.run(host = '127.0.0.1', debug=True)
